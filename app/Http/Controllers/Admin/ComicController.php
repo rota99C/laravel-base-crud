@@ -38,18 +38,18 @@ class ComicController extends Controller
     public function store(Request $request)
     {
 
-        /*     $validate_request = $request->validate([
+        /* $validate_request = $request->validate([
             'title' => 'required|max:70',
             'description' => 'required|max:2000',
             'series' => 'nullable|max:70',
-            'sale_date' => 'nullable|',
+            'sale_date' => 'nullable',
             'type' => 'required|max:70',
             'price' => 'required|digits:4',
             'thumb' => 'required|max:700|active_url',
-        ]);
-        ddd($validate_request);
+        ]); */
+        /*  ddd($validate_request);
         Comic::create($validate_request); */
-        /* ddd($request); */
+        /*  ddd($request); */
         $_comic = new Comic();
         $_comic->title = $request['title'];
         $_comic->description = $request['description'];
@@ -80,9 +80,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -92,9 +92,19 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        /* $validate_request = $request->validate([
+            'title' => 'required|max:70',
+            'description' => 'required|max:2000',
+            'series' => 'nullable|max:70',
+            'sale_date' => 'nullable',
+            'type' => 'required|max:70',
+            'price' => 'required|digits:4',
+            'thumb' => 'required|max:700|active_url',
+        ]); */
+        $comic->update($request->all());
+        return redirect()->route('admin.comics.index')->with('messaggio', 'hai aggiornato il fumetto');
     }
 
     /**
@@ -103,8 +113,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('admin.comics.index')->with('messaggio', 'hai cancellato il fumetto');
     }
 }

@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+Route::get('/', 'ComicController@index')->name('homepage');
 Route::get('/comics', 'ComicController@index')->name('comics');
 Route::get('/comics/{comic}', 'ComicController@show')->name('comic');
 
