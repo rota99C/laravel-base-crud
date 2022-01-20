@@ -12285,8 +12285,8 @@ main a .singolo {
 }
 
 main a .singolo img {
-  width: 230px;
-  height: 230px;
+  width: 190px;
+  height: 190px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -12377,42 +12377,46 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.footer-top .footer-list {
+.footer-top .container-footer-top {
+  width: 80%;
+}
+
+.footer-top .container-footer-top .footer-list {
   padding: 30px 0px;
 }
 
-.footer-top .footer-list h3 {
+.footer-top .container-footer-top .footer-list h3 {
   color: white;
 }
 
-.footer-top .footer-list ul {
+.footer-top .container-footer-top .footer-list ul {
   padding: 0;
   margin: 0;
 }
 
-.footer-top .footer-list ul li {
+.footer-top .container-footer-top .footer-list ul li {
   list-style-type: none;
   font-size: 0.8em;
 }
 
-.footer-top .footer-list ul li a {
+.footer-top .container-footer-top .footer-list ul li a {
   text-decoration: none;
   color: #82827f;
 }
 
-.footer-top .footer-list ul li a:visited {
+.footer-top .container-footer-top .footer-list ul li a:visited {
   color: #82827f;
 }
 
-.footer-top .footer-logo img {
+.footer-top .container-footer-top .footer-logo img {
   position: absolute;
   top: -80px;
   right: 0px;
 }
 
 .footer-bottom {
-  height: calc(100vh - 929.18px);
   background-color: #303030;
+  padding: 30px 0px;
 }
 
 .footer-bottom .sign-up {

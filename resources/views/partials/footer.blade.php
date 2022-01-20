@@ -1,6 +1,6 @@
 <footer class="w-100">
     <div class="footer-top">
-        <div class="w-75 m-auto h-100 d-flex justify-content-between">
+        <div class="container-footer-top m-auto h-100 d-flex justify-content-between">
 
             <div class="footer-list col-5 d-flex flex-column flex-wrap">
                 <div class="list pb-3">

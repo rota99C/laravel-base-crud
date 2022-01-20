@@ -1,4 +1,4 @@
-@extends ('admin.layouts.app')
+@extends ('layouts.admin')
 @section('page-title', 'Admin')
 @section ('content')
 <div class="d-grid gap-2">
