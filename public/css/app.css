@@ -12499,3 +12499,48 @@ footer {
   border: 1px lightgrey solid;
 }
 
+aside {
+  float: left;
+  background-color: #303841;
+  height: 100vh;
+  width: 250px;
+}
+
+aside .admin_control {
+  background-color: #0282f9;
+  padding: 8px 0px;
+}
+
+aside .container_admin {
+  padding: 8px 2rem;
+}
+
+aside ul li {
+  list-style: none;
+  padding: 8px 0px;
+}
+
+aside ul li a {
+  color: #76838E;
+}
+
+.container_table {
+  width: calc(100% - 250px);
+}
+
+.container_table .fa-database {
+  font-size: 30px;
+}
+
+.container_table .description-comic span {
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+.container_table .bottone_delete {
+  border-style: none;
+}
+

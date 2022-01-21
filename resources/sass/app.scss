@@ -317,3 +317,58 @@ footer{
 
 
 
+//sidebar
+aside{
+    float: left;
+    background-color: #303841;
+    height: 100vh;
+    width: 250px;
+    .admin_control{
+        background-color: #0282f9;
+        padding: 8px 0px;
+
+    }
+    .container_admin{
+        padding: 8px 2rem;
+    }
+    ul li{
+        list-style: none;
+        padding: 8px 0px;
+        a{
+            color: #76838E;
+        }
+        
+    }
+
+}
+
+
+
+
+
+//index/admin
+.container_table{
+    width: calc(100% - 250px);
+    .fa-database{
+        font-size: 30px;
+    }
+    .description-comic span{
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    }
+    .bottone_delete{
+            border-style: none;
+    }
+}
+
+
+
+
+    //index/admin/create
+ 
+
+
+

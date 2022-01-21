@@ -1,8 +1,10 @@
 <header class="w-100 bg-primary">
     <div class="header-top w-100">
         <div class="w-75 m-auto d-flex justify-content-end text-white">
+            <p><a href="{{route('admin.comics.index')}}"><i class="fas fa-user-shield text-white me-5"></i></a></p>
             <p class="me-5">DC POWER&#8480; VISA&#174;</p>
             <p>ADDITIONAL DC SITES</p>
+
         </div>
     </div>
     <div class="header-bottom w-100 bg-white">
