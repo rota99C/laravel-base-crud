@@ -1,0 +1,68 @@
+$brand-color: #0282F9;
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+.container-content{
+    font-family: 'Roboto Condensed', sans-serif;
+    .content{
+        h1{
+            color: $brand-color;
+            font-weight: bold;
+        }
+        .container_aside_card{
+            display: flex;
+            aside{
+                 ul{
+                     padding-left: 0px!important;
+                     li{
+                     margin-bottom: 3px;
+                     margin-right: 30px;
+                     display: flex;
+                     justify-content: space-between;
+                    }
+                    hr{
+                        margin:0px 20px 0px 0px;
+                    }
+                }
+            } 
+            .cards{
+                float: right;
+                margin-top: 50px;
+                .singolo{
+                    width: 20%;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 0.9em;
+                    line-height: 1rem;
+
+                    p{
+                        text-transform: uppercase;
+                        span {
+                            color: $brand-color;
+                        }
+                    }
+                }
+            }
+            .search_movies{
+                top: -70px;
+                right: 36px;
+                width: 202px;
+                .searchbar{
+                    border-bottom: 2px solid $brand-color ;
+                    margin-bottom: 5px;
+                    input {
+                        border: none;
+                        text-align: right;
+                    }
+                }
+                .newlest{
+                    padding: 5px 8px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+
+    }
+
+}

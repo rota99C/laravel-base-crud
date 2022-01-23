@@ -38,19 +38,19 @@ class ComicController extends Controller
     public function store(Request $request)
     {
 
-        /* $validate_request = $request->validate([
+        $validate_request = $request->validate([
             'title' => 'required|max:70',
             'description' => 'required|max:2000',
             'series' => 'nullable|max:70',
             'sale_date' => 'nullable',
             'type' => 'required|max:70',
-            'price' => 'required|digits:4',
+            'price' => 'required',
             'thumb' => 'required|max:700|active_url',
-        ]); */
-        /*  ddd($validate_request);
-        Comic::create($validate_request); */
+        ]);
+        /* ddd($validate_request); */
+        Comic::create($validate_request);
         /*  ddd($request); */
-        $_comic = new Comic();
+        /* $_comic = new Comic();
         $_comic->title = $request['title'];
         $_comic->description = $request['description'];
         $_comic->price = $request['price'];
@@ -58,7 +58,7 @@ class ComicController extends Controller
         $_comic->sale_date = $request['sale_date'];
         $_comic->type = $request['type'];
         $_comic->thumb = $request['thumb'];
-        $_comic->save();
+        $_comic->save(); */
 
         return redirect()->route('admin.comics.index');
     }
@@ -94,15 +94,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        /* $validate_request = $request->validate([
+        $validate_request = $request->validate([
             'title' => 'required|max:70',
             'description' => 'required|max:2000',
             'series' => 'nullable|max:70',
             'sale_date' => 'nullable',
             'type' => 'required|max:70',
-            'price' => 'required|digits:4',
+            'price' => 'required',
             'thumb' => 'required|max:700|active_url',
-        ]); */
+        ]);
         $comic->update($request->all());
         return redirect()->route('admin.comics.index')->with('messaggio', 'hai aggiornato il fumetto');
     }
