@@ -1,7 +1,7 @@
 <header class="w-100 bg-primary">
     <div class="header-top w-100">
         <div class="w-75 m-auto d-flex justify-content-end text-white">
-            <p><a href="{{route('admin.comics.index')}}"><i class="fas fa-user-shield text-white me-5"></i></a></p>
+            <p><a href="{{route('admin.homepage')}}"><i class="fas fa-user-shield text-white me-5"></i></a></p>
             <p class="me-5">DC POWER&#8480; VISA&#174;</p>
             <p>ADDITIONAL DC SITES</p>
 
@@ -15,8 +15,8 @@
             <div class="h-100">
                 <ul>
                     <li><a href="">CHARACTERS</a></li>
-                    <li><a href="">COMICS</a></li>
-                    <li><a href="">MOVIES</a></li>
+                    <li><a href="{{route('comics')}}">COMICS</a></li>
+                    <li><a href="{{route('movies')}}">MOVIES</a></li>
                     <li><a href="">TV</a></li>
                     <li><a href="">GAMES</a></li>
                     <li><a href="">COLLECTIBLES</a></li>

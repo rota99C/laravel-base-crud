@@ -14,6 +14,12 @@ $brand-color: #0282F9;
 /* font-header */
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+.active {
+    color: white;
+}
+.inactive {
+    color: #76838E;
+}
 /* header */
 .header-top{
     background-color: $brand-color;
@@ -68,9 +74,9 @@ $brand-color: #0282F9;
 
 /* slideshow */
 #slideshow{
-    background-image: url(../img/jumbotron.jpg);
     height: 450px;
-    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
     background-position: top;
 }
 
@@ -272,8 +278,34 @@ footer{
     background-color: $brand-color;
     .container-img{
         bottom: 15px;
-    left: 475px;
+    left: 430px;
     border: 1px solid white;
+    }
+}
+
+.card_social{
+    width: 390px;
+    height: 90px;
+    bottom: 35px;
+    left: 650px;
+    div{
+        display: flex;
+        width: 125px;
+        height: 80px;
+        background: #005295;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 10px;
+        p{
+            margin-bottom: 0!important;
+        }
+        i{
+            font-size: 30px;
+            color: #00a9d9;
+            
+        }
     }
 }
 
@@ -311,6 +343,20 @@ footer{
 .show-bottom{
     background-color: #F6F6F6;
     border: 1px lightgrey solid;
+        .talent{
+            hr{
+            width:90%;
+            margin: 5px!important;
+             }
+        }
+        .specs{
+            hr{
+               width:100%;
+                margin: 5px!important; 
+            }
+            
+        }
+    
 }
 
 
@@ -336,7 +382,11 @@ aside{
         list-style: none;
         padding: 8px 0px;
         a{
-            color: #76838E;
+            color: inherit;
+            text-decoration: none;
+            &:visited {
+                color: inherit;
+            }
         }
         
     }
@@ -347,7 +397,7 @@ aside{
 
 
 
-//index/admin
+//index/admin/comics
 .container_table{
     width: calc(100% - 250px);
     .fa-database{
@@ -363,6 +413,33 @@ aside{
     .bottone_delete{
             border-style: none;
     }
+}
+
+//index/admin/movies
+
+
+
+.container_table{
+    width: calc(100% - 250px);
+    .fa-database{
+        font-size: 30px;
+    }
+    table{
+            .description-movie span{
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        }
+        .bottone_delete{
+                border-style: none;
+        }
+        hr{
+            margin: 0px!important;
+        }
+    }
+    
 }
 
 

@@ -19,6 +19,9 @@ Route::get('/', 'ComicController@index')->name('homepage');
 Route::get('/comics', 'ComicController@index')->name('comics');
 Route::get('/comics/{comic}', 'ComicController@show')->name('comic');
 //lato ADMIN/comic
+Route::get('/admin', function () {
+    return view('admin.admin');
+})->name('admin.homepage');
 Route::get('/admin/comics', 'Admin\ComicController@index')->name('admin.comics.index');
 Route::get('/admin/comics/create', 'Admin\ComicController@create')->name('admin.comics.create');
 Route::post('comics', 'Admin\ComicController@store')->name('admin.comics.store');

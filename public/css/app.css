@@ -12252,6 +12252,14 @@ fieldset:disabled .btn {
 
 /* font-header */
 
+.active {
+  color: white;
+}
+
+.inactive {
+  color: #76838E;
+}
+
 /* header */
 
 .header-top {
@@ -12315,9 +12323,10 @@ fieldset:disabled .btn {
 /* slideshow */
 
 #slideshow {
-  background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
   height: 450px;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
   background-position: top;
 }
 
@@ -12524,8 +12533,36 @@ footer {
 
 .show-top .container-img {
   bottom: 15px;
-  left: 475px;
+  left: 430px;
   border: 1px solid white;
+}
+
+.card_social {
+  width: 390px;
+  height: 90px;
+  bottom: 35px;
+  left: 650px;
+}
+
+.card_social div {
+  display: flex;
+  width: 125px;
+  height: 80px;
+  background: #005295;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.card_social div p {
+  margin-bottom: 0 !important;
+}
+
+.card_social div i {
+  font-size: 30px;
+  color: #00a9d9;
 }
 
 .show-middle {
@@ -12568,6 +12605,16 @@ footer {
   border: 1px lightgrey solid;
 }
 
+.show-bottom .talent hr {
+  width: 90%;
+  margin: 5px !important;
+}
+
+.show-bottom .specs hr {
+  width: 100%;
+  margin: 5px !important;
+}
+
 aside {
   float: left;
   background-color: #303841;
@@ -12590,7 +12637,12 @@ aside ul li {
 }
 
 aside ul li a {
-  color: #76838E;
+  color: inherit;
+  text-decoration: none;
+}
+
+aside ul li a:visited {
+  color: inherit;
 }
 
 .container_table {
@@ -12611,5 +12663,29 @@ aside ul li a {
 
 .container_table .bottone_delete {
   border-style: none;
+}
+
+.container_table {
+  width: calc(100% - 250px);
+}
+
+.container_table .fa-database {
+  font-size: 30px;
+}
+
+.container_table table .description-movie span {
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+.container_table table .bottone_delete {
+  border-style: none;
+}
+
+.container_table table hr {
+  margin: 0px !important;
 }
 

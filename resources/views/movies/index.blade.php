@@ -5,7 +5,11 @@
 <link rel="stylesheet" href="../../sass/_movies.scss">
 @endsection
 
-
+@section('slideshow')
+<div id="slideshow" class="w-100">
+    <img src="{{asset('img/jumbotron.jpg')}}" alt="">
+</div>
+@endsection
 @section('content')
 <div class="container-content w-100 mt-4">
     <div class="content w-75 m-auto">
