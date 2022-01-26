@@ -43,3 +43,17 @@ Route::get('/admin/movies/{movie}', 'Admin\MovieController@show')->name('admin.m
 Route::get('/admin/movies/{movie}/edit', 'Admin\MovieController@edit')->name('admin.movies.edit');
 Route::put('movies/{movie}', 'Admin\MovieController@update')->name('admin.movies.update');
 Route::delete('movies/{movie}', 'Admin\MovieController@destroy')->name('admin.movies.destroy');
+
+// characters
+Route::get('/characters', 'CharacterController@index')->name('characters');
+Route::get('/character/{character}', 'CharacterController@show')->name('character');
+
+//lato ADMIN/character
+
+Route::get('/admin/characters', 'Admin\CharacterController@index')->name('admin.characters.index');
+Route::get('/admin/characters/create', 'Admin\characterController@create')->name('admin.characters.create');
+Route::post('characters', 'Admin\characterController@store')->name('admin.characters.store');
+Route::get('/admin/characters/{character}', 'Admin\characterController@show')->name('admin.characters.show');
+Route::get('/admin/characters/{character}/edit', 'Admin\characterController@edit')->name('admin.characters.edit');
+Route::put('characters/{character}', 'Admin\characterController@update')->name('admin.characters.update');
+Route::delete('characters/{character}', 'Admin\characterController@destroy')->name('admin.characters.destroy');

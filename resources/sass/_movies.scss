@@ -66,3 +66,25 @@ $brand-color: #0282F9;
     }
 
 }
+
+// characters
+#characters {
+    .cards {
+        margin-top: 0;
+        h5 {
+            padding-left: 12px;
+        }
+        .singolo {
+        padding: 12px 12px 0 12px;
+            .character-image {
+            height: 290px;
+            width: 100%;
+            }
+    }
+    }
+    .search_movies {
+        top: -20px;
+    }
+    
+}
+

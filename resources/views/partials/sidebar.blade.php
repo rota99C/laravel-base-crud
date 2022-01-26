@@ -5,7 +5,7 @@
     </div>
     <ul>
         <li class="{{ Route::currentRouteName() === '' ? 'active' : 'inactive' }}"><i class="fas fa-home me-2"></i><a href="{{route('comics')}}">Homepage</a></li>
-        <li><a href="">Characters</a></li>
+        <li class="{{ Route::currentRouteName() === 'admin.characters.index' ? 'active' : 'inactive' }}"><i class="fas fa-mask me-2"></i><a href="{{route('admin.characters.index')}}">Characters</a></li>
         <li class="{{ Route::currentRouteName() === 'admin.comics.index' ? 'active' : 'inactive' }}"><i class="fas fa-book-open me-2"></i><a href="{{route('admin.comics.index')}}">Comics</a></li>
         <li class="{{ Route::currentRouteName() === 'admin.movies.index' ? 'active' : 'inactive' }}"><i class="fas fa-film me-2"></i><a href="{{route('admin.movies.index')}}">Movies</a></li>
         <li><a href="">Tv</a></li>

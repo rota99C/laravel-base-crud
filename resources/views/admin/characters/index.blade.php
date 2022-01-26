@@ -1,0 +1,79 @@
+@extends ('layouts.admin')
+@section('page-title', 'Admin/characters')
+@section ('content')
+@include('partials.sidebar')
+<div class="container_table ms-3">
+    <div class="d-flex w-25 justify-content-around pt-4 pb-4">
+        <i class="fas fa-database"></i>
+        <h3>Characters list</h3>
+        <button type="button" class="btn btn-success"><a class="text-white" href="{{route('admin.characters.create')}}">+ create</a>
+        </button>
+    </div>
+    @if (session('messaggio'))
+    <div class="alert alert-success">
+        {{session('messaggio')}}
+    </div>
+    @endif
+
+    <div class="d-grid gap-3">
+
+    </div>
+    <table class="table">
+        <thead class="text-secondary">
+            <tr>
+                <th>Name</th>
+                <th class="w-25">Descritpion</th>
+                <th>Images</th>
+                <th>Powers</th>
+                <th>Social</th>
+                <th class="w-25">Details</th>
+                <th>Tools</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($characters as $character)
+            <tr>
+                <td scope="row">{{$character -> name}}</td>
+                <td class="description-movie"><span>{{$character -> description}}</span></td>
+                <td class=""> <img class="col-4" src="{{$character -> image_thumb}}" alt="">
+                    <img class="col-8 float-end" src="{{$character -> image_cover}}" alt="">
+                </td>
+                <td>{{$character -> powers}}</td>
+                <td>
+                    <a href="{{$character -> facebook_page}}"><i class="fab fa-facebook"></i></a>
+                    <a href="{{$character -> twitter_page}}"><i class="fab fa-twitter"></i></a>
+                    <a href="{{$character -> instagram_page}}"><i class="fab fa-instagram"></i></a>
+                    <a href="{{$character -> video_page}}"><i class="fas fa-video"></i></a>
+                </td>
+
+                <td>{{$character -> first_appearance}}
+                    <hr>
+                    {{$character -> alter_ego}}
+                    <hr>
+                    {{$character -> occupation}}
+                </td>
+                <td><a href="{{route('admin.characters.edit', $character->id)}}"><i class="fas fa-pen m-2"></i></a>
+                    <form action="{{route('admin.characters.destroy', $character->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="bottone_delete" type="submit"><i class="fas fa-trash-alt text-danger m-2"></i></button>
+                    </form>
+                    <a href="{{route('character', $character->id)}}"><i class="far fa-eye text-success m-2"></i></a>
+                </td>
+
+            </tr>
+            @endforeach
+        </tbody>
+
+    </table>
+    <div class="d-flex justify-content-center mt-3">
+        {{$characters->links()}}
+    </div>
+
+
+
+
+
+</div>
+@endsection

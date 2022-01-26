@@ -14,7 +14,7 @@
                 </a></div>
             <div class="h-100">
                 <ul>
-                    <li><a href="">CHARACTERS</a></li>
+                    <li><a href="{{route('characters')}}">CHARACTERS</a></li>
                     <li><a href="{{route('comics')}}">COMICS</a></li>
                     <li><a href="{{route('movies')}}">MOVIES</a></li>
                     <li><a href="">TV</a></li>

@@ -12242,6 +12242,27 @@ fieldset:disabled .btn {
   font-size: 12px;
 }
 
+#characters .cards {
+  margin-top: 0;
+}
+
+#characters .cards h5 {
+  padding-left: 12px;
+}
+
+#characters .cards .singolo {
+  padding: 12px 12px 0 12px;
+}
+
+#characters .cards .singolo .character-image {
+  height: 290px;
+  width: 100%;
+}
+
+#characters .search_movies {
+  top: -20px;
+}
+
 /* regola generale */
 
 * {
@@ -12537,6 +12558,11 @@ footer {
   border: 1px solid white;
 }
 
+#character-show-top h2 {
+  left: 35%;
+  top: -126px;
+}
+
 .card_social {
   width: 390px;
   height: 90px;
@@ -12598,6 +12624,10 @@ footer {
 
 .show-middle .advertisement {
   color: #555555;
+}
+
+#character-show-middle {
+  padding: 50px 0px;
 }
 
 .show-bottom {

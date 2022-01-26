@@ -28,6 +28,7 @@
                 <th>Social</th>
                 <th class="w-25">Talent</th>
                 <th>Genres</th>
+                <th>Tools</th>
             </tr>
         </thead>
         <tbody>
